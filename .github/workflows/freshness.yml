@@ -1,0 +1,10 @@
+name: Content Freshness
+on:
+  schedule: [{ cron: '0 9 1 * *' }]
+  workflow_dispatch:
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/freshness-check.mjs

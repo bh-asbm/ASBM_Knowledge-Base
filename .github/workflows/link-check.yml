@@ -1,0 +1,10 @@
+name: Check External Links
+on:
+  schedule: [{ cron: '0 7 * * 1' }]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx linkinator docs --timeout 10000 --recurse --skip "^(?!https?://)"
