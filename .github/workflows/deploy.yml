@@ -1,18 +1,68 @@
 name: Deploy Docusaurus to GitHub Pages
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v5
-        with: { node-version: 'lts/*' }
-      - run: npm ci
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'   # stable for Docusaurus v3
+          cache: 'npm'
+
+      - name: Check for package-lock.json (required by npm ci)
+        run: |
+          if [ ! -f package-lock.json ]; then
+            echo "ERROR: package-lock.json is missing. Commit it, or temporarily use 'npm install' instead of 'npm ci'."
+            exit 1
+          fi
+
+      - name: Show Node & npm versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Install dependencies
+        id: install
+        run: npm ci
+        env:
+          npm_config_loglevel: verbose
+
+      # If install failed, print the npm debug log so we can see the real cause
+      - name: Print npm debug log (on failure)
+        if: ${{ failure() && steps.install.outcome == 'failure' }}
+        run: |
+          LOGFILE=$(ls -t /home/runner/.npm/_logs/*-debug-*.log 2>/dev/null | head -n1 || true)
+          if [ -n "$LOGFILE" ]; then
+            echo "---- NPM DEBUG LOG ($LOGFILE) ----"
+            sed -n '1,400p' "$LOGFILE" || true
+          else
+            echo "No npm debug log found."
+          fi
+
+      - name: Build
+        if: ${{ success() }}
+        run: npm run build
+
+      - name: Publish to GitHub Pages
+        if: ${{ success() }}
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
+      # Optional but handy: keep logs as an artifact for digging in later
+      - name: Upload npm logs artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-logs
+          path: /home/runner/.npm/_logs/
+          if-no-files-found: ignore
