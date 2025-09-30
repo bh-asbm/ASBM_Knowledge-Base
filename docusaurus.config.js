@@ -2,11 +2,11 @@
 module.exports = {
   title: 'Masonry Knowledge Base',
   tagline: 'Fast, trustworthy answers for masonry products',
-  url: 'https://<org>.github.io',
-  baseUrl: '/<repo>/',
+  url: 'https://bh-asbm.github.io',
+  baseUrl: '/ASBM_Knowledge-Base/',
   favicon: 'img/favicon.ico',
-  organizationName: '<org>',
-  projectName: '<repo>',
+  organizationName: 'bh-asbm',
+  projectName: 'ASBM_Knowledge-Base',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: { defaultLocale: 'en', locales: ['en'] },
@@ -14,7 +14,7 @@ module.exports = {
     ['@docusaurus/preset-classic', {
       docs: {
         sidebarPath: require.resolve('./sidebars.js'),
-        editUrl: 'https://github.com/<org>/<repo>/edit/main/',
+        editUrl: 'https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/',
         showLastUpdateTime: true,
         showLastUpdateAuthor: false
       },
@@ -28,7 +28,7 @@ module.exports = {
       items: [
         { to: '/docs/quick-guides/choosing-a-sealer', label: 'Quick Guides', position: 'left' },
         { to: '/docs/vendors/euclid-chemical', label: 'Vendors', position: 'left' },
-        { href: 'https://github.com/<org>/<repo>', label: 'GitHub', position: 'right' }
+        { href: 'https://github.com/bh-asbm/<repo>', label: 'GitHub', position: 'right' }
       ]
     },
     prism: { additionalLanguages: ['bash','json','yaml'] }
