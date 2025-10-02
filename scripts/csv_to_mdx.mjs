@@ -22,7 +22,8 @@ fs.mkdirSync(OUT, { recursive: true });
 
 for (const line of csv) {
   const r = rowToObj(line);
-  const slug = (r.sku || r.title || 'product').lowercase?.() || (r.sku || r.title || 'product').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+  const baseSlug = r.sku || r.title || 'product';
+  const slug = baseSlug.toLowerCase().replace(/[^a-z0-9]+/g,'-');
   const file = path.join(OUT, `${slug}.mdx`);
   const mdx = `---
 title: ${r.title || ''}
@@ -47,7 +48,7 @@ Add a concise, sales-friendly summary here.
 - Bullet the key decision info here.
 
 ## Coverage & Yield
-${r.coverage_rate or ''}
+${r.coverage_rate || ''}
 
 **Last reviewed:** ${r.last_verified || ''} • _Internal use only._
 `;
