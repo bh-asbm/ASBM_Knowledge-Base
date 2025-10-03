@@ -8,7 +8,7 @@ on:
 jobs:
   build-deploy:
       permissions:
-      contents: write
+        contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
