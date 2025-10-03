@@ -1,0 +1,68 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/ASBM_Knowledge-Base/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/ASBM_Knowledge-Base/docs",
+          "mainDocId": "meta/glossary",
+          "docs": [
+            {
+              "id": "meta/changelog",
+              "path": "/ASBM_Knowledge-Base/docs/meta/changelog",
+              "sidebar": "docs"
+            },
+            {
+              "id": "meta/glossary",
+              "path": "/ASBM_Knowledge-Base/docs/meta/glossary",
+              "sidebar": "docs"
+            },
+            {
+              "id": "quick-guides/choosing-a-sealer",
+              "path": "/ASBM_Knowledge-Base/docs/quick-guides/choosing-a-sealer",
+              "sidebar": "docs"
+            },
+            {
+              "id": "quick-guides/troubleshooting-efflorescence",
+              "path": "/ASBM_Knowledge-Base/docs/quick-guides/troubleshooting-efflorescence",
+              "sidebar": "docs"
+            },
+            {
+              "id": "search",
+              "path": "/ASBM_Knowledge-Base/docs/search",
+              "sidebar": "docs"
+            },
+            {
+              "id": "vendors/euclid-chemical/index",
+              "path": "/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "vendors/euclid-chemical/products/everclear-sealer",
+              "path": "/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/everclear-sealer",
+              "sidebar": "docs"
+            },
+            {
+              "id": "vendors/euclid-chemical/products/tammscoat-acrylic",
+              "path": "/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/tammscoat-acrylic",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/ASBM_Knowledge-Base/docs/meta/glossary",
+                "label": "meta/glossary"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}
