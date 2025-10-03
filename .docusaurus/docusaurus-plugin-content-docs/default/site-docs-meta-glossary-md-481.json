@@ -1,0 +1,23 @@
+{
+  "id": "meta/glossary",
+  "title": "Glossary",
+  "description": "Key terms used across the Masonry KB.",
+  "source": "@site/docs/meta/glossary.md",
+  "sourceDirName": "meta",
+  "slug": "/meta/glossary",
+  "permalink": "/ASBM_Knowledge-Base/docs/meta/glossary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/docs/meta/glossary.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1759452712000,
+  "frontMatter": {
+    "title": "Glossary"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Choosing a Sealer",
+    "permalink": "/ASBM_Knowledge-Base/docs/quick-guides/choosing-a-sealer"
+  }
+}
