@@ -2,6 +2,8 @@ name: Content Freshness
 on:
   schedule: [{ cron: '0 9 1 * *' }]
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   freshness:
     runs-on: ubuntu-latest
