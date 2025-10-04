@@ -1,41 +1,35 @@
-# Masonry-Knowledge-Base
+# ASBM Knowledge Base
 
-A knowledge base platform built with JavaScript and CSS to help manage and share information related to masonry.
+Static Docusaurus 3 site for ASBM documentation and vendor product details.
 
-## Features
+## Getting started
 
-- Easy-to-navigate knowledge base for masonry topics
-- Responsive design for desktop and mobile
-- Search functionality for fast information retrieval
-- Organized content structure
+- Requires Node.js 18 (matches CI) and npm.
+- Install dependencies with:
+  ```bash
+  npm install
+  ```
+- Launch the dev server (hot reload):
+  ```bash
+  npm start
+  ```
 
-## Getting Started
+## Build & verification
 
-### Prerequisites
+- Production build (includes Pagefind indexing):
+  ```bash
+  npm run build
+  ```
+- Freshness check enforced in CI; run locally before PRs:
+  ```bash
+  node scripts/freshness-check.mjs
+  ```
 
-- Node.js (v14 or higher recommended)
-- npm
+## Contributor docs
 
-### Installation
+- Agent-focused guide: [`agents.md`](agents.md)
+- Copilot-specific hints consumed by GitHub: [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/bh-asbm/ASBM_Knowledge-Base.git
-   cd ASBM_Knowledge-Base
-   npm install
-   npm start
+## License
 
-   Usage
-Access the knowledge base in your web browser at http://localhost:3000 (or the specified port).
-Browse or search for masonry-related topics.
-Contributing
-Fork the repository
-Create a new branch (git checkout -b feature/your-feature)
-Commit your changes (git commit -am 'Add new feature')
-Push to the branch (git push origin feature/your-feature)
-Open a pull request
-License
-Specify your license here (e.g., MIT).
-
-Contact
-For questions or support, contact the repository owner or open an issue.
+Specify license details here.
