@@ -12,6 +12,23 @@ export default {
   "organizationName": "bh-asbm",
   "projectName": "ASBM_Knowledge-Base",
   "onBrokenLinks": "throw",
+  "markdown": {
+    "hooks": {
+      "onBrokenMarkdownLinks": "warn",
+      "onBrokenMarkdownImages": "throw"
+    },
+    "format": "mdx",
+    "mermaid": false,
+    "emoji": true,
+    "mdx1Compat": {
+      "comments": true,
+      "admonitions": true,
+      "headingIds": true
+    },
+    "anchors": {
+      "maintainCase": false
+    }
+  },
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -263,22 +280,5 @@ export default {
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
-  "noIndex": false,
-  "markdown": {
-    "format": "mdx",
-    "mermaid": false,
-    "emoji": true,
-    "mdx1Compat": {
-      "comments": true,
-      "admonitions": true,
-      "headingIds": true
-    },
-    "anchors": {
-      "maintainCase": false
-    },
-    "hooks": {
-      "onBrokenMarkdownLinks": "warn",
-      "onBrokenMarkdownImages": "throw"
-    }
-  }
+  "noIndex": false
 };
