@@ -12,9 +12,15 @@
       "name": "@docusaurus/plugin-content-pages",
       "version": "3.9.1"
     },
+<<<<<<< HEAD
     "docusaurus-plugin-debug": {
       "type": "package",
       "name": "@docusaurus/plugin-debug",
+=======
+    "docusaurus-plugin-sitemap": {
+      "type": "package",
+      "name": "@docusaurus/plugin-sitemap",
+>>>>>>> 053409a49db212b0883ed15502971085ef5fc689
       "version": "3.9.1"
     },
     "docusaurus-plugin-svgr": {
