@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Docusaurus Temp Files
-
-=======
->>>>>>> 053409a49db212b0883ed15502971085ef5fc689
 This folder stores temp files that Docusaurus' client bundler accesses.
 
 DO NOT hand-modify files in this folder because they will be overwritten in the
