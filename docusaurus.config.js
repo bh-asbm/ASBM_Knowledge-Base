@@ -8,7 +8,11 @@ module.exports = {
   organizationName: 'bh-asbm',
   projectName: 'ASBM_Knowledge-Base',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
+    }
+  },
   i18n: { defaultLocale: 'en', locales: ['en'] },
   presets: [
     ['@docusaurus/preset-classic', {

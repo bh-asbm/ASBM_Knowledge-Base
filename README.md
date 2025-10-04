@@ -6,10 +6,13 @@ Static Docusaurus 3 site for ASBM documentation and vendor product details.
 
 - Requires Node.js 18 (matches CI) and npm.
 - Install dependencies with:
+
   ```bash
   npm install
   ```
+
 - Launch the dev server (hot reload):
+
   ```bash
   npm start
   ```
@@ -17,10 +20,13 @@ Static Docusaurus 3 site for ASBM documentation and vendor product details.
 ## Build & verification
 
 - Production build (includes Pagefind indexing):
+
   ```bash
   npm run build
   ```
+
 - Freshness check enforced in CI; run locally before PRs:
+
   ```bash
   node scripts/freshness-check.mjs
   ```
