@@ -7,11 +7,28 @@ export default {
   "title": "Masonry Knowledge Base",
   "tagline": "Fast, trustworthy answers for masonry products",
   "url": "https://bh-asbm.github.io",
-  "baseUrl": "/ASBM_Knowledge-Base/",
+  "baseUrl": "/",
   "favicon": "img/favicon.ico",
   "organizationName": "bh-asbm",
   "projectName": "ASBM_Knowledge-Base",
   "onBrokenLinks": "throw",
+  "markdown": {
+    "hooks": {
+      "onBrokenMarkdownLinks": "warn",
+      "onBrokenMarkdownImages": "throw"
+    },
+    "format": "mdx",
+    "mermaid": false,
+    "emoji": true,
+    "mdx1Compat": {
+      "comments": true,
+      "admonitions": true,
+      "headingIds": true
+    },
+    "anchors": {
+      "maintainCase": false
+    }
+  },
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -25,13 +42,13 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/workspaces/ASBM_Knowledge-Base/sidebars.js",
+          "sidebarPath": "/home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/sidebars.js",
           "editUrl": "https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/",
           "showLastUpdateTime": true,
           "showLastUpdateAuthor": false
         },
         "theme": {
-          "customCss": "/workspaces/ASBM_Knowledge-Base/src/css/custom.css"
+          "customCss": "/home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/src/css/custom.css"
         },
         "blog": false
       }
@@ -263,22 +280,5 @@ export default {
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
-  "noIndex": false,
-  "markdown": {
-    "format": "mdx",
-    "mermaid": false,
-    "emoji": true,
-    "mdx1Compat": {
-      "comments": true,
-      "admonitions": true,
-      "headingIds": true
-    },
-    "anchors": {
-      "maintainCase": false
-    },
-    "hooks": {
-      "onBrokenMarkdownLinks": "warn",
-      "onBrokenMarkdownImages": "throw"
-    }
-  }
+  "noIndex": false
 };

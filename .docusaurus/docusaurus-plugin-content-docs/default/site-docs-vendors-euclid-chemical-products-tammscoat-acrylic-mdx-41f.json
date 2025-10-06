@@ -5,13 +5,13 @@
   "source": "@site/docs/vendors/euclid-chemical/products/tammscoat-acrylic.mdx",
   "sourceDirName": "vendors/euclid-chemical/products",
   "slug": "/vendors/euclid-chemical/products/tammscoat-acrylic",
-  "permalink": "/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/tammscoat-acrylic",
+  "permalink": "/docs/vendors/euclid-chemical/products/tammscoat-acrylic",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/docs/vendors/euclid-chemical/products/tammscoat-acrylic.mdx",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedAt": 1759718976000,
   "frontMatter": {
     "title": "TAMMSCOAT (Acrylic Coating)",
     "vendor": "Euclid Chemical",
@@ -35,8 +35,8 @@
     "coverage_rate": "125–200 sf/gal per coat (substrate-dependent)",
     "packaging": "1 gal, 5 gal pails",
     "links": {
-      "tds": "https://www.euclidchemical.com/",
-      "sds": "https://www.euclidchemical.com/"
+      "tds": "www.euclidchemical.com/fileshare/ProductFiles/TDS/Tamoseal.pdf",
+      "sds": "https://www.euclidchemical.com/fileshare/ProductFiles/msds/TR2101650501_U.pdf"
     },
     "compatibility": {
       "primers": [
@@ -63,6 +63,6 @@
   "sidebar": "docs",
   "previous": {
     "title": "EVERCLEAR (Acrylic Curing & Sealing Compounds)",
-    "permalink": "/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/everclear-sealer"
+    "permalink": "/docs/vendors/euclid-chemical/products/everclear-sealer"
   }
 }

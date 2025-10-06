@@ -5,13 +5,13 @@
   "source": "@site/docs/quick-guides/choosing-a-sealer.md",
   "sourceDirName": "quick-guides",
   "slug": "/quick-guides/choosing-a-sealer",
-  "permalink": "/ASBM_Knowledge-Base/docs/quick-guides/choosing-a-sealer",
+  "permalink": "/docs/quick-guides/choosing-a-sealer",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/docs/quick-guides/choosing-a-sealer.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedAt": 1759718976000,
   "frontMatter": {
     "title": "Choosing a Sealer",
     "description": "Fast decision path for film-forming vs. penetrating sealers, breathability, slip, and sheen.",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Glossary",
-    "permalink": "/ASBM_Knowledge-Base/docs/meta/glossary"
+    "permalink": "/docs/meta/glossary"
   },
   "next": {
     "title": "Troubleshooting Efflorescence",
-    "permalink": "/ASBM_Knowledge-Base/docs/quick-guides/troubleshooting-efflorescence"
+    "permalink": "/docs/quick-guides/troubleshooting-efflorescence"
   }
 }

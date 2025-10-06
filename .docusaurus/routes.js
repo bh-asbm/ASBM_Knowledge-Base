@@ -3,97 +3,62 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/ASBM_Knowledge-Base/__docusaurus/debug',
-    component: ComponentCreator('/ASBM_Knowledge-Base/__docusaurus/debug', 'a86'),
-    exact: true
-  },
-  {
-    path: '/ASBM_Knowledge-Base/__docusaurus/debug/config',
-    component: ComponentCreator('/ASBM_Knowledge-Base/__docusaurus/debug/config', '375'),
-    exact: true
-  },
-  {
-    path: '/ASBM_Knowledge-Base/__docusaurus/debug/content',
-    component: ComponentCreator('/ASBM_Knowledge-Base/__docusaurus/debug/content', '0b2'),
-    exact: true
-  },
-  {
-    path: '/ASBM_Knowledge-Base/__docusaurus/debug/globalData',
-    component: ComponentCreator('/ASBM_Knowledge-Base/__docusaurus/debug/globalData', 'b82'),
-    exact: true
-  },
-  {
-    path: '/ASBM_Knowledge-Base/__docusaurus/debug/metadata',
-    component: ComponentCreator('/ASBM_Knowledge-Base/__docusaurus/debug/metadata', 'c64'),
-    exact: true
-  },
-  {
-    path: '/ASBM_Knowledge-Base/__docusaurus/debug/registry',
-    component: ComponentCreator('/ASBM_Knowledge-Base/__docusaurus/debug/registry', '341'),
-    exact: true
-  },
-  {
-    path: '/ASBM_Knowledge-Base/__docusaurus/debug/routes',
-    component: ComponentCreator('/ASBM_Knowledge-Base/__docusaurus/debug/routes', '3ef'),
-    exact: true
-  },
-  {
-    path: '/ASBM_Knowledge-Base/docs',
-    component: ComponentCreator('/ASBM_Knowledge-Base/docs', 'a48'),
+    path: '/docs',
+    component: ComponentCreator('/docs', '7f4'),
     routes: [
       {
-        path: '/ASBM_Knowledge-Base/docs',
-        component: ComponentCreator('/ASBM_Knowledge-Base/docs', 'f1a'),
+        path: '/docs',
+        component: ComponentCreator('/docs', '521'),
         routes: [
           {
-            path: '/ASBM_Knowledge-Base/docs',
-            component: ComponentCreator('/ASBM_Knowledge-Base/docs', '4a2'),
+            path: '/docs',
+            component: ComponentCreator('/docs', '9db'),
             routes: [
               {
-                path: '/ASBM_Knowledge-Base/docs/meta/changelog',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/meta/changelog', '267'),
+                path: '/docs/meta/changelog',
+                component: ComponentCreator('/docs/meta/changelog', 'da6'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/ASBM_Knowledge-Base/docs/meta/glossary',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/meta/glossary', '2fc'),
+                path: '/docs/meta/glossary',
+                component: ComponentCreator('/docs/meta/glossary', '315'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/ASBM_Knowledge-Base/docs/quick-guides/choosing-a-sealer',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/quick-guides/choosing-a-sealer', '183'),
+                path: '/docs/quick-guides/choosing-a-sealer',
+                component: ComponentCreator('/docs/quick-guides/choosing-a-sealer', '85f'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/ASBM_Knowledge-Base/docs/quick-guides/troubleshooting-efflorescence',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/quick-guides/troubleshooting-efflorescence', '495'),
+                path: '/docs/quick-guides/troubleshooting-efflorescence',
+                component: ComponentCreator('/docs/quick-guides/troubleshooting-efflorescence', '192'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/ASBM_Knowledge-Base/docs/search',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/search', '5ed'),
+                path: '/docs/search',
+                component: ComponentCreator('/docs/search', '856'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/', '786'),
+                path: '/docs/vendors/euclid-chemical/',
+                component: ComponentCreator('/docs/vendors/euclid-chemical/', 'e2e'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/everclear-sealer',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/everclear-sealer', 'ce2'),
+                path: '/docs/vendors/euclid-chemical/products/everclear-sealer',
+                component: ComponentCreator('/docs/vendors/euclid-chemical/products/everclear-sealer', 'd37'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/tammscoat-acrylic',
-                component: ComponentCreator('/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/products/tammscoat-acrylic', '957'),
+                path: '/docs/vendors/euclid-chemical/products/tammscoat-acrylic',
+                component: ComponentCreator('/docs/vendors/euclid-chemical/products/tammscoat-acrylic', '90c'),
                 exact: true,
                 sidebar: "docs"
               }
@@ -102,6 +67,11 @@ export default [
         ]
       }
     ]
+  },
+  {
+    path: '/',
+    component: ComponentCreator('/', '2e1'),
+    exact: true
   },
   {
     path: '*',
