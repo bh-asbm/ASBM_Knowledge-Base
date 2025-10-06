@@ -5,23 +5,23 @@
   "source": "@site/docs/meta/changelog.md",
   "sourceDirName": "meta",
   "slug": "/meta/changelog",
-  "permalink": "/ASBM_Knowledge-Base/docs/meta/changelog",
+  "permalink": "/docs/meta/changelog",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/docs/meta/changelog.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedAt": 1759718976000,
   "frontMatter": {
     "title": "Changelog"
   },
   "sidebar": "docs",
   "previous": {
     "title": "Troubleshooting Efflorescence",
-    "permalink": "/ASBM_Knowledge-Base/docs/quick-guides/troubleshooting-efflorescence"
+    "permalink": "/docs/quick-guides/troubleshooting-efflorescence"
   },
   "next": {
     "title": "Glossary",
-    "permalink": "/ASBM_Knowledge-Base/docs/meta/glossary"
+    "permalink": "/docs/meta/glossary"
   }
 }

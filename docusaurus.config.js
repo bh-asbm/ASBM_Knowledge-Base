@@ -3,7 +3,7 @@ module.exports = {
   title: 'Masonry Knowledge Base',
   tagline: 'Fast, trustworthy answers for masonry products',
   url: 'https://bh-asbm.github.io',
-  baseUrl: '/ASBM_Knowledge-Base/',
+  baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'bh-asbm',
   projectName: 'ASBM_Knowledge-Base',

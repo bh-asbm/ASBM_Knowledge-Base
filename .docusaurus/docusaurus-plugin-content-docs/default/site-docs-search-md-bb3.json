@@ -5,13 +5,13 @@
   "source": "@site/docs/search.md",
   "sourceDirName": ".",
   "slug": "/search",
-  "permalink": "/ASBM_Knowledge-Base/docs/search",
+  "permalink": "/docs/search",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/docs/search.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedAt": 1759718976000,
   "frontMatter": {
     "title": "Search",
     "description": "Local search powered by Pagefind"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Troubleshooting Efflorescence",
-    "permalink": "/ASBM_Knowledge-Base/docs/quick-guides/troubleshooting-efflorescence"
+    "permalink": "/docs/quick-guides/troubleshooting-efflorescence"
   },
   "next": {
     "title": "Euclid Chemical (Vendor)",
-    "permalink": "/ASBM_Knowledge-Base/docs/vendors/euclid-chemical/"
+    "permalink": "/docs/vendors/euclid-chemical/"
   }
 }

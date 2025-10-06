@@ -5,13 +5,13 @@
   "source": "@site/docs/quick-guides/troubleshooting-efflorescence.md",
   "sourceDirName": "quick-guides",
   "slug": "/quick-guides/troubleshooting-efflorescence",
-  "permalink": "/ASBM_Knowledge-Base/docs/quick-guides/troubleshooting-efflorescence",
+  "permalink": "/docs/quick-guides/troubleshooting-efflorescence",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/bh-asbm/ASBM_Knowledge-Base/edit/main/docs/quick-guides/troubleshooting-efflorescence.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedAt": 1759718976000,
   "frontMatter": {
     "title": "Troubleshooting Efflorescence",
     "description": "Identify source, clean safely, and prevent recurrence.",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Choosing a Sealer",
-    "permalink": "/ASBM_Knowledge-Base/docs/quick-guides/choosing-a-sealer"
+    "permalink": "/docs/quick-guides/choosing-a-sealer"
   },
   "next": {
     "title": "Changelog",
-    "permalink": "/ASBM_Knowledge-Base/docs/meta/changelog"
+    "permalink": "/docs/meta/changelog"
   }
 }
