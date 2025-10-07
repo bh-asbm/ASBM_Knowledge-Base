@@ -1,9 +1,8 @@
-// Replace <org> and <repo> before deploying
 module.exports = {
   title: 'Masonry Knowledge Base',
   tagline: 'Fast, trustworthy answers for masonry products',
   url: 'https://bh-asbm.github.io',
-  baseUrl: '/ASBM_Knowledge-Base/',
+  baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'bh-asbm',
   projectName: 'ASBM_Knowledge-Base',
@@ -32,7 +31,7 @@ module.exports = {
       items: [
         { to: '/docs/quick-guides/choosing-a-sealer', label: 'Quick Guides', position: 'left' },
         { to: '/docs/vendors/euclid-chemical', label: 'Vendors', position: 'left' },
-        { href: 'https://github.com/bh-asbm/<repo>', label: 'GitHub', position: 'right' }
+        { href: 'https://github.com/bh-asbm/ASBM_Knowledge-Base', label: 'GitHub', position: 'right' }
       ]
     },
     prism: { additionalLanguages: ['bash','json','yaml'] }
