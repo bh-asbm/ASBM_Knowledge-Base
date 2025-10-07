@@ -1,4 +1,3 @@
-// Replace <org> and <repo> before deploying
 module.exports = {
   title: 'Masonry Knowledge Base',
   tagline: 'Fast, trustworthy answers for masonry products',
