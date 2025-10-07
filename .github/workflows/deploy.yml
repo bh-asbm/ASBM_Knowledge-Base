@@ -8,35 +8,38 @@ on:
 jobs:
   build-deploy:
     permissions:
-        contents: write
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
-      - run: npm ci
-      - run: npm run build
-      - name: Set up Node.js
-      - name: Check for package-lock.json (required by npm ci)
+
+      - name: Install dependencies (use npm ci if package-lock.json exists)
+        id: install
         run: |
-          if [ ! -f package-lock.json ]; then
-            echo "ERROR: package-lock.json is missing. Commit it, or temporarily use 'npm install' instead of 'npm ci'."
-            exit 1
+          if [ -f package-lock.json ]; then
+            echo "package-lock.json found — running 'npm ci' for reproducible install"
+            npm ci
+          else
+            echo "No package-lock.json — falling back to 'npm install'"
+            npm install
           fi
+        env:
+          npm_config_loglevel: verbose
 
       - name: Show Node & npm versions
         run: |
           node --version
           npm --version
 
-      - name: Install dependencies
-        id: install
-        run: npm ci
-        env:
-          npm_config_loglevel: verbose
+      - name: Build
+        run: npm run build
 
-      # If install failed, print the npm debug log so we can see the real cause
       - name: Print npm debug log (on failure)
         if: ${{ failure() && steps.install.outcome == 'failure' }}
         run: |
@@ -48,10 +51,6 @@ jobs:
             echo "No npm debug log found."
           fi
 
-      - name: Build
-        if: ${{ success() }}
-        run: npm run build
-
       - name: Publish to GitHub Pages
         if: ${{ success() }}
         uses: peaceiris/actions-gh-pages@v4
@@ -59,7 +58,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
 
-      # Optional but handy: keep logs as an artifact for digging in later
       - name: Upload npm logs artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
