@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmasonry_knowledge_base=self.webpackChunkmasonry_knowledge_base||[]).push([[634],{192:(e,s,a)=>{a.r(s),a.d(s,{default:()=>r});var n=a(6347),o=a(4848);function r(){return(0,o.jsx)(n.rd,{to:"/docs/quick-guides/choosing-a-sealer"})}}}]);
