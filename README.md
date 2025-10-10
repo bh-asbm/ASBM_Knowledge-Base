@@ -5,6 +5,7 @@ Static Docusaurus 3 site for ASBM documentation and vendor product details.
 ## Getting started
 
 - Requires Node.js 20 (matches CI) and npm.
+- **Dev Container**: Open in VS Code with the Dev Containers extension or GitHub Codespaces for automatic setup.
 - Install dependencies with:
 
   ```bash

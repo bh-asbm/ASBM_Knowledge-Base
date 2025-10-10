@@ -1,4 +1,40 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {}
+  // Dev container configuration for ASBM Knowledge Base
+  // - Uses Node.js 20 to match CI and project requirements
+  // - Includes ESLint, Prettier, and MDX extensions for better DX
+  // - Auto-installs dependencies on container creation
+  // - Forwards port 3000 for Docusaurus dev server
+  "name": "ASBM Knowledge Base",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "unifiedjs.vscode-mdx",
+        "yzhang.markdown-all-in-one",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "eslint.enable": true,
+        "files.eol": "\n"
+      }
+    }
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Docusaurus Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
 }
