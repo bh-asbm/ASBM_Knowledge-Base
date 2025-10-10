@@ -4,23 +4,22 @@
   "private": true,
   "scripts": {
     "start": "docusaurus start",
-    "build": "docusaurus build && node scripts/build-search.js",
+    "build": "docusaurus build && node scripts/build-search.mjs",
     "serve": "docusaurus serve",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@docusaurus/core": "^3.5.2",
-    "@docusaurus/preset-classic": "^3.5.2",
-    "deploy": "^1.0.3",
+    "@docusaurus/core": "^3.9.1",
+    "@docusaurus/preset-classic": "^3.9.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "run": "^1.5.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.0.0",
+    "@eslint/js": "^9.37.0",
     "@microsoft/eslint-formatter-sarif": "^3.1.0",
-    "eslint": "^9.0.0",
-    "globals": "^15.0.0",
-    "pagefind": "^1.1.0"
+    "eslint": "^9.37.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0",
+    "pagefind": "^1.4.0"
   }
 }

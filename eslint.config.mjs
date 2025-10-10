@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
+import react from 'eslint-plugin-react';
 
 export default [
   {
@@ -13,6 +14,9 @@ export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,mjs}'],
+    plugins: {
+      react
+    },
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
@@ -27,6 +31,14 @@ export default [
         }
       }
     },
-    rules: {}
+    rules: {
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error'
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
   }
 ];
