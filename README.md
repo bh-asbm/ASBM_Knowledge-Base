@@ -4,7 +4,7 @@ Static Docusaurus 3 site for ASBM documentation and vendor product details.
 
 ## Getting started
 
-- Requires Node.js 18 (matches CI) and npm.
+- Requires Node.js 20 (matches CI) and npm.
 - Install dependencies with:
 
   ```bash
