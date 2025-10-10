@@ -1,3 +1,12 @@
+require('dotenv').config();
+
+// Check if Algolia DocSearch is enabled via environment variables
+const algoliaEnabled = !!(
+  process.env.ALGOLIA_APP_ID &&
+  process.env.ALGOLIA_SEARCH_API_KEY &&
+  process.env.ALGOLIA_INDEX_NAME
+);
+
 module.exports = {
   title: 'Masonry Knowledge Base',
   tagline: 'Fast, trustworthy answers for masonry products',
@@ -26,12 +35,21 @@ module.exports = {
     }]
   ],
   themeConfig: {
+    ...(algoliaEnabled && {
+      algolia: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+        contextualSearch: true
+      }
+    }),
     navbar: {
       title: 'Masonry KB',
       items: [
         { to: '/docs/quick-guides/choosing-a-sealer', label: 'Quick Guides', position: 'left' },
         { to: '/docs/vendors/euclid-chemical', label: 'Vendors', position: 'left' },
-        { href: 'https://github.com/bh-asbm/ASBM_Knowledge-Base', label: 'GitHub', position: 'right' }
+        { href: 'https://github.com/bh-asbm/ASBM_Knowledge-Base', label: 'GitHub', position: 'right' },
+        ...(algoliaEnabled ? [{ type: 'search', position: 'right' }] : [])
       ]
     },
     prism: { additionalLanguages: ['bash','json','yaml'] }
