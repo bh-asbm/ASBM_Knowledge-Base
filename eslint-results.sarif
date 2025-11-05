@@ -1,0 +1,59 @@
+{
+  "version": "2.1.0",
+  "$schema": "http://json.schemastore.org/sarif-2.1.0-rtm.5",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "ESLint",
+          "informationUri": "https://eslint.org",
+          "rules": [],
+          "version": "9.37.0"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/docusaurus.config.js"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/eslint.config.mjs"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/scripts/build-search.mjs"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/scripts/csv_to_mdx.mjs"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/scripts/freshness-check.mjs"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/sidebars.js"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/src/components/PagefindSearch.jsx"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/runner/work/ASBM_Knowledge-Base/ASBM_Knowledge-Base/src/pages/index.js"
+          }
+        }
+      ],
+      "results": []
+    }
+  ]
+}
