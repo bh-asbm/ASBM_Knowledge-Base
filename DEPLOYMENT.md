@@ -41,7 +41,9 @@ The repository should be configured in Settings > Pages with:
 - **Source**: Deploy from a branch
 - **Branch**: `gh-pages` / `root`
 
-The site will be available at: `https://bh-asbm.github.io/ASBM_Knowledge-Base/`
+The site will be available at: `https://bh-asbm.github.io/`
+
+Note: The `baseUrl` is set to `/` in `docusaurus.config.js`, which means the site deploys to the root of the GitHub Pages domain rather than a subdirectory.
 
 ## Manual Deployment
 
@@ -62,6 +64,8 @@ If the site shows a 404 error:
 3. **Ensure no conflicting workflows** (like Jekyll) are enabled
 4. **Check that the build completed successfully**
 5. **Verify the `baseUrl` in `docusaurus.config.js` matches your deployment URL**
+   - Current config uses `baseUrl: '/'` for root deployment at `https://bh-asbm.github.io/`
+   - If deploying to a subdirectory, update `baseUrl` to match (e.g., `/ASBM_Knowledge-Base/`)
 
 ### Common Issues
 
