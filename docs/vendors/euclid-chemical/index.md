@@ -4,6 +4,10 @@ description: Masonry-relevant coatings, sealers, and repair products frequently 
 last_verified: "2025-09-28"
 ---
 
+# Euclid Chemical
+
+**Website:** [www.euclidchemical.com](https://www.euclidchemical.com)
+
 This section organizes Euclid Chemical products that are relevant to masonry and concrete facade work.
 
 - **Above-Grade Coatings** — e.g., TAMMSCOAT acrylic elastomeric.
