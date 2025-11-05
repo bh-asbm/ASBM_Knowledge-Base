@@ -47,7 +47,8 @@ module.exports = {
       title: 'Masonry KB',
       items: [
         { to: '/docs/quick-guides/choosing-a-sealer', label: 'Quick Guides', position: 'left' },
-        { to: '/docs/vendors/euclid-chemical', label: 'Vendors', position: 'left' },
+        { to: '/docs/vendors', label: 'Vendors', position: 'left' },
+        { to: '/docs/resources', label: 'Resources', position: 'left' },
         { href: 'https://github.com/bh-asbm/ASBM_Knowledge-Base', label: 'GitHub', position: 'right' },
         ...(algoliaEnabled ? [{ type: 'search', position: 'right' }] : [])
       ]
