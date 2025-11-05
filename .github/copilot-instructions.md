@@ -8,7 +8,7 @@ Do not add aspirational advice — document only what is discoverable in the rep
 - Docusaurus v3 static site; all docs live under `docs/`, product pages nest under `docs/vendors/<vendor>/products/`.
 - Build pipeline runs Pagefind via `scripts/build-search.js` right after `docusaurus build` to populate `build/pagefind/`.
 - `docusaurus.config.js` sets `onBrokenLinks: 'throw'`, so missing/changed paths break the build.
-- CI (`.github/workflows/pr-ci.yml`) pins Node 18, runs `npm run build`, then `node scripts/freshness-check.mjs`; keep local changes compatible with that flow.
+- CI (`.github/workflows/pr-ci.yml`) pins Node 20, runs `npm run build`, then `node scripts/freshness-check.mjs`; keep local changes compatible with that flow.
 
 ## Key files to know
 - `docusaurus.config.js` — site metadata, baseUrl, editUrl, broken-link behaviour.
@@ -31,7 +31,7 @@ Do not add aspirational advice — document only what is discoverable in the rep
 - Generated MDX front-matter keys (`title`, `vendor`, `sku`, etc.) are consumed by both the freshness script and site templates; keep names stable across scripts and docs.
 
 ## Gotchas & preservation notes
-- Use Node 18 locally to mirror CI; older versions may fail when running Pagefind or ES module scripts.
+- Use Node 20 locally to mirror CI; older versions may fail when running Pagefind or ES module scripts.
 - `scripts/build-search.js` requires that `npm run build` completes first so `build/` exists; missing build output leads to Pagefind errors.
 - When reorganising docs, update internal links and check `sidebars.js` for any manually curated sections.
 - Pagefind assets deploy under `/pagefind/`; avoid moving or renaming that folder without updating the loader component.
