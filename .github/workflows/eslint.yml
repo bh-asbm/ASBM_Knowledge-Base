@@ -32,9 +32,10 @@ jobs:
 
       - name: Install ESLint
         run: |
-          npm install eslint@9.37.0
-          npm install @eslint/js@9.37.0
-          npm install globals@15.14.0
+          npm install eslint@9.39.1
+          npm install @eslint/js@9.39.1
+          npm install globals@16.5.0
+          npm install eslint-plugin-react@7.37.5
           npm install @microsoft/eslint-formatter-sarif@3.1.0
 
       - name: Run ESLint
