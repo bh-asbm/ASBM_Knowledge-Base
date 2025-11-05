@@ -32,6 +32,10 @@ Static Docusaurus 3 site for ASBM documentation and vendor product details.
   node scripts/freshness-check.mjs
   ```
 
+## Deployment
+
+The site automatically deploys to GitHub Pages on push to `main`. See [DEPLOYMENT.md](DEPLOYMENT.md) for details about the deployment process, troubleshooting, and why this is a Docusaurus site (not Jekyll).
+
 ## Contributor docs
 
 - Agent-focused guide: [`agents.md`](agents.md)
