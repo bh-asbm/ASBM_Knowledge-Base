@@ -34,7 +34,10 @@ Static Docusaurus 3 site for ASBM documentation and vendor product details.
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages on push to `main`. See [DEPLOYMENT.md](DEPLOYMENT.md) for details about the deployment process, troubleshooting, and why this is a Docusaurus site (not Jekyll).
+The site automatically deploys to GitHub Pages on push to `main`. 
+
+- **Quick Setup**: See [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md) for GitHub Pages configuration (deploy from `gh-pages` branch, not `main/docs`)
+- **Details**: See [DEPLOYMENT.md](DEPLOYMENT.md) for the full deployment process, troubleshooting, and technical details
 
 ## Contributor docs
 
