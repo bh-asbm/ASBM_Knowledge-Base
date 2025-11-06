@@ -37,13 +37,30 @@ The build command runs:
 
 ## GitHub Pages Configuration
 
-The repository should be configured in Settings > Pages with:
+**IMPORTANT:** Your GitHub Pages **must** be configured to deploy from the `gh-pages` branch, **NOT** from `main/docs`.
+
+### Required Settings
+
+Go to your repository Settings > Pages and configure:
 - **Source**: Deploy from a branch
 - **Branch**: `gh-pages` / `root`
+- **Custom domain**: git.allseasonsbuilding.com (configured via CNAME file in `static/`)
 
-The site will be available at: `https://bh-asbm.github.io/`
+### How it works
 
-Note: The `baseUrl` is set to `/` in `docusaurus.config.js`, which means the site deploys to the root of the GitHub Pages domain rather than a subdirectory.
+1. When you push to `main`, the GitHub Actions workflow (`.github/workflows/deploy.yml`) runs
+2. The workflow builds the site with `npm run build` (generates static files in `build/`)
+3. The workflow publishes the `build/` directory to the `gh-pages` branch
+4. GitHub Pages serves the site from the `gh-pages` branch
+5. The site is available at your custom domain: https://git.allseasonsbuilding.com
+
+### Custom Domain Setup
+
+The `CNAME` file in the `static/` directory contains your custom domain (`git.allseasonsbuilding.com`). Docusaurus automatically copies this file to the build output, which tells GitHub Pages to use your custom domain.
+
+**Do not move or delete the CNAME file from `static/`** - it must be there for the custom domain to work.
+
+Note: The `baseUrl` is set to `/` in `docusaurus.config.js`, which means the site deploys to the root of your domain rather than a subdirectory.
 
 ## Manual Deployment
 
@@ -70,9 +87,12 @@ If the site shows a 404 error:
 ### Common Issues
 
 - **Jekyll workflow added**: Remove any `jekyll-gh-pages.yml` or similar Jekyll configuration
-- **Wrong branch configured**: Pages must deploy from `gh-pages` branch, not `main`
+- **Wrong branch configured**: Pages must deploy from `gh-pages` branch, not `main` or `main/docs`
+  - Go to Settings > Pages and verify Source is set to "Deploy from a branch" with branch `gh-pages` / `root`
 - **Build failures**: Check the Actions tab for error logs
 - **Base URL mismatch**: Verify `baseUrl` in `docusaurus.config.js`
+- **Custom domain not working**: Ensure `CNAME` file is in `static/` directory (not repository root)
+- **404 on custom domain**: Verify DNS is configured correctly and GitHub Pages settings show your custom domain
 
 ## Local Development
 
