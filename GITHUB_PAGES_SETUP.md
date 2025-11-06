@@ -7,7 +7,7 @@
 ## Step-by-Step Configuration
 
 ### 1. Go to Repository Settings
-Navigate to: https://github.com/bh-asbm/ASBM_Knowledge-Base/settings/pages
+Navigate to your repository Settings > Pages (Settings tab → Pages in the left sidebar)
 
 ### 2. Configure Source
 Under "Build and deployment":
