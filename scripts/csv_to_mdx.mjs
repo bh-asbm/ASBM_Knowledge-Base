@@ -37,11 +37,9 @@ function sanitizeYaml(value) {
 // Security: Sanitize markdown content to prevent content injection
 function sanitizeMarkdown(value) {
   if (!value) return '';
-  // Escape HTML entities to prevent XSS while preserving content
+  // Basic cleanup: limit consecutive newlines, preserve content
+  // MDX/Docusaurus will handle HTML escaping during render
   return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
     .replace(/\n{3,}/g, '\n\n'); // Limit consecutive newlines
 }
 
