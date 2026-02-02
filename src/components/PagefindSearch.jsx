@@ -4,14 +4,24 @@ export default function PagefindSearch() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "/pagefind/pagefind.js";
+    script.async = true;
+    
     script.onload = () => {
       if (window.pagefindUI) {
         window.pagefindUI({ element: "#search" });
       }
     };
+    
+    script.onerror = () => {
+      console.error("Failed to load Pagefind script");
+    };
+    
     document.body.appendChild(script);
+    
     return () => {
-      document.body.removeChild(script);
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
     };
   }, []);
 
