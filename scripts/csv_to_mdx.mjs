@@ -28,15 +28,19 @@ function sanitizeYaml(value) {
     .replace(/\n/g, '\\n')    // Escape newlines
     .replace(/\r/g, '\\r')    // Escape carriage returns
     .replace(/\t/g, '\\t')    // Escape tabs
-    .replace(/[<>]/g, '');    // Remove angle brackets (potential XSS)
+    .replace(/&/g, '&amp;')   // Escape ampersands
+    .replace(/</g, '&lt;')    // Escape less-than
+    .replace(/>/g, '&gt;');   // Escape greater-than
 }
 
 // Security: Sanitize markdown content to prevent content injection
 function sanitizeMarkdown(value) {
   if (!value) return '';
-  // Remove potentially dangerous characters while preserving readability
+  // Escape HTML entities to prevent XSS while preserving content
   return value
-    .replace(/[<>]/g, '')     // Remove angle brackets (potential HTML)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
     .replace(/\n{3,}/g, '\n\n'); // Limit consecutive newlines
 }
 
