@@ -4,9 +4,7 @@ export default function PagefindSearch() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "/pagefind/pagefind.js";
-    script.type = "text/javascript";
     script.async = true;
-    script.crossOrigin = "anonymous";
     
     script.onload = () => {
       if (window.pagefindUI) {
