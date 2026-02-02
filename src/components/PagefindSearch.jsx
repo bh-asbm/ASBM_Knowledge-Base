@@ -20,7 +20,7 @@ export default function PagefindSearch() {
     
     return () => {
       if (script.parentNode) {
-        document.body.removeChild(script);
+        script.parentNode.removeChild(script);
       }
     };
   }, []);
