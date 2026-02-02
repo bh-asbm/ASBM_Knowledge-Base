@@ -21,16 +21,17 @@ function rowToObj(row) {
 // Security: Sanitize YAML frontmatter values to prevent injection attacks
 function sanitizeYaml(value) {
   if (!value) return '';
-  // Escape special YAML characters and newlines to prevent injection
+  // Escape only what's necessary for YAML double-quoted strings
+  // Remove dangerous characters that could break out of quotes or inject code
   return value
     .replace(/\\/g, '\\\\')   // Escape backslashes first
     .replace(/"/g, '\\"')     // Escape double quotes
-    .replace(/\n/g, '\\n')    // Escape newlines
-    .replace(/\r/g, '\\r')    // Escape carriage returns
-    .replace(/\t/g, '\\t')    // Escape tabs
-    .replace(/&/g, '&amp;')   // Escape ampersands
-    .replace(/</g, '&lt;')    // Escape less-than
-    .replace(/>/g, '&gt;');   // Escape greater-than
+    .replace(/\n/g, ' ')      // Replace newlines with spaces
+    .replace(/\r/g, '')       // Remove carriage returns
+    .replace(/\t/g, ' ')      // Replace tabs with spaces
+    .replace(/[<>]/g, '')     // Remove angle brackets (potential HTML/script injection)
+    // eslint-disable-next-line no-control-regex
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, ''); // Remove control chars
 }
 
 // Security: Sanitize markdown content to prevent content injection
